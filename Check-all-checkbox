@@ -1,0 +1,18 @@
+$(document).on("click","#workspace_all_check_button",function(){
+			if(this.checked){
+				$(".workspace_checkbox").each(function(){
+					this.checked = true;
+				});
+			}else{
+				 $('.workspace_checkbox').each(function(){
+					this.checked = false;
+				});
+			}
+		});
+		$(document).on("click",".workspace_checkbox",function(){
+			if($('.workspace_checkbox:checked').length == $('.workspace_checkbox').length){
+				$('#workspace_all_check_button').prop('checked',true);
+			}else{
+				$('#workspace_all_check_button').prop('checked',false);
+			}
+		});
